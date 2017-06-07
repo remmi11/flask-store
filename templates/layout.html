@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>{{ page_title }}</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,700" type="text/css">
+	<!--<link rel="stylesheet" href="./static/bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">-->
+
+
+	<!-- bootstrap / jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--font-awesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- google fonts -->
+  	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	
+	<!--custom css-->
+	<link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}" type="text/css">
+
+</head>
+
+<body>
+
+	<!--<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+			<a class="navbar-brand" href="#">WebSiteName</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="shirts {% if section == " shirts " %}on{% endif %}"><a href="shirts.html">Shirts</a></li>
+				<li class="contact {% if section == " contact " %}on{% endif %}"><a href="contact.html">Contact</a></li>
+				<li class="cart"><a target="paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&amp;business=Q6NFNPFRBWR8S&amp;display=1">Shopping Cart</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>-->
+
+	<div id="Intro">
+		<div>
+			<p>
+				<i class="fa fa-phone-square fa-1x"></i>&nbsp;&nbsp;806.xxx.xxxx&nbsp;&nbsp;
+				<i class="fa fa-envelope fa-1x"></i>&nbsp;&nbsp;sales@sophisticatedcollector.com
+			</p>
+		</div>
+	</div>
+	<nav class="navbar navbar-default">
+	<!--<nav class="navbar navbar-inverse">-->
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+				<span class="navbar-brand">Sophisticated Collector</span>
+
+			</div>
+			<div class="collapse navbar-collapse navber-right" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="home"><a href="/">Home</a></li>
+					<li class="shirts"><a href="/all">All Products</a></li>
+					<li class="contact"><a href="/contact">Contact</a></li>
+					<li class="cart"><a target="paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&amp;business=Q6NFNPFRBWR8S&amp;display=1"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	{% block body %}{% endblock %}
+
+
+	<!--<footer class="footer">
+		<div class="container">
+			<ul>
+				<li><a href="http://twitter.com/treehouse">Twitter</a></li>
+				<li><a href="https://www.facebook.com/TeamTreehouse">Facebook</a></li>
+			</ul>
+
+			<p>&copy;{{ current_year }} Shirts 4 Mike</p>
+		</div>
+	</footer>-->
+
+	<footer class="footer">
+		<a style="top:10px;" href="tel:806-316-6366"><i class="fa fa-phone"></i></a>
+		<!-- <span>/</span> -->
+		<a href="https://www.facebook.com/Panhandleclosetsolutions/?pnref=lhc" target="_blank">
+			<i class="fa fa-facebook"></i>
+			</a>
+		<h5>
+			<p>&copy;{{ current_year }} Sophisticated Collector</p>
+		</h5>
+	</footer>
+
+	
+
+	{% for message in get_flashed_messages() %}
+	<script>
+		alert("{{ message }}");
+	</script>
+	{% endfor %}
+
+</body>
+
+</html>

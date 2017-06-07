@@ -1,0 +1,223 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    color: #777;
+    background-color: #eeeeee;
+ }
+a {
+    font-size: 20px;
+}
+/*.fa {
+    font-size: 33px;
+    vertical-align: middle
+}*/
+/*h2 {
+    text-align: center;
+}*/
+.p {
+    font-family: 'Roboto', sans-serif;
+    color: #777;
+    text-align: center;
+    padding-top: 130px;
+    margin: 10px 0 10px;
+}
+footer {
+    font-size: 25px;
+    padding: 50px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    background-color: #222222;
+}
+
+footer .fa {
+    color: #9d9d9d;
+    font-size: 24px;
+}
+.banner {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+#myNavbar {
+    min-height: 100px;
+    top: 50px;
+}
+.navbar-default .navbar-nav>li>a {
+    line-height: 80px;
+}
+.navbar-default {
+    border-radius: 0 !important;
+    border-top: none;
+    box-shadow: none;
+    top: 40px;
+}
+#Intro {
+    top: 0;
+    position: fixed;
+    z-index: 5000;
+    background-color: #FE5F55;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    padding-top: 10px;
+    padding-right: 15px;
+    text-align: right;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 17px;
+}
+/*.item-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}*/
+.thumbnail .caption {
+    color:#777;
+}
+/*.item-container .col-md-6 .container-price {
+    margin: 15px;
+    width: 47%;
+    padding:10px;
+    border: #cdcdcd medium solid;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}*/
+.white {
+    margin-bottom: 100px;
+    border: #cdcdcd medium solid;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}  
+.container .home-container {
+    margin-top: 40px;
+}
+.navbar-default .navbar-brand {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 80px;
+}
+
+.thumbnail {
+    text-align: center;
+}
+.thumbnail-footer {
+    top: 0%;
+    left: 0;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    background-color: rgba(255, 150, 0, 0.9);
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    z-index: 1;
+    color: #fff;
+}
+.caption-small {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 200;
+    font-size: 8;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    color: #444;
+}
+ .caption-name {
+    background-color: #246791;
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+}
+
+.breadcrumb {
+    background-color: #eeeeee;
+    font-size: 20px;
+}
+.item {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 25px;
+}
+.latest {
+    background-color: #fff;
+}
+.form-horizontal .form-group {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.welcome {
+    color:#fff;
+    background-color: #333745;
+}
+.col-md-6 img {
+    margin-top: 30px;
+    width: 100%;
+}
+.jumbotron p {
+    font-size: 18px;
+}
+
+
+/*############################*/
+
+
+/*** contact form  ***/
+
+
+/*############################*/
+
+.form-horizontal .col-sm-6 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/*############################*/
+/*** mobile display ***/
+/*############################*/
+
+@media (max-width: 767px) {
+    .item-container .col-md-6 {
+        width: 93%;
+    }
+    .carousel-caption {
+        display: none;
+    }
+    .container {
+        padding: 50px;
+    }
+    .bottom-menu {
+        display: none;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: #333;
+        margin-top: 40px;
+    }
+    .navbar-header {
+        min-height: 100px;
+    }
+    .navbar-default .navbar-brand {
+        line-height: 80px;
+    }
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        margin-top: 20px;
+    }
+    #Intro {
+        text-align: center;
+    }
+    .fa-2x {
+        margin-top: 15px;
+        font-size: 17px !important;
+    }
+
+}

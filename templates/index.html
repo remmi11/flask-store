@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% block body %}
+
+<!--<div class="container banner">
+	<img class="hero" src="./static/shelving-home.jpg " alt="">
+	<div class="button">
+		<a href="shirts.html"></a>
+	</div>
+</div>-->
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron welcome">
+	<div class="container home-container">
+		<h2> Welcome to Sophisticated Collector! </h2>
+		<br>
+		<p>The southwestern United States is home to beautiful landscapes, vast deserts, red rocks, and of course, Native American
+			influences. Inside our galleries you wll find original and gorgeous Southwestern artifacts including paintings, furniture,
+			beaded dolls all influenced by the beautiful southwest. All items offered with fast and reliable shipping. 100% satisfaction
+			guarantee.. Whether you enjoy the scenery or the cultural designs of the southwest, you are bound to find an art piece
+			that will look great on your wall!</p>
+		<p><a class="btn btn-primary btn-lg" href="/all" role="button">View galleries »</a>
+		</p>
+	</div>
+</div>
+<!--<div class="jumbotron latest">-->
+	<div class="container">
+		<h2>SC's Latest Items</h2>
+		<div class="row">
+			{% for item in items %}
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<img src="{{ item.img }}" alt="">
+					<div class="caption">
+						<h3>{{item.name}}</h3>
+						<p>{{item.description}}</p>
+						<p align="center"><a href="{{ item.page_url }}" class="btn btn-primary btn-block">Details</a></p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+
+
+
+<!--</div>-->
+<!--original-->
+<!--<div class="section shirts latest">
+
+	<div class="wrapper">
+
+		<h2>Mike&rsquo;s Latest Shirts</h2>
+
+		<ul class="products">
+				{{ product_data }}
+		</ul>
+
+	</div>
+
+</div>-->
+{% endblock %}
