@@ -167,6 +167,7 @@ footer .fa {
 }
 
 
+
 /*############################*/
 
 
@@ -180,6 +181,9 @@ footer .fa {
   padding-left: 15px;
 }
 
+.white {
+    margin-top: 100px;
+}
 
 /*############################*/
 /*** mobile display ***/
@@ -224,6 +228,10 @@ footer .fa {
     .fa-2x {
         margin-top: 15px;
         font-size: 17px !important;
+    }
+    .white {
+        border-width: 0px;
+        margin: 0px;
     }
 
 }
