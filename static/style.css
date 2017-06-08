@@ -200,7 +200,7 @@ footer .fa {
     }
     .navbar-default .navbar-toggle {
         border-color: #333;
-        margin-top: 40px;
+        margin-top: 32px;
     }
     .navbar-header {
         min-height: 100px;
@@ -215,6 +215,7 @@ footer .fa {
 
     .navbar-default .navbar-brand {
         font-size: 20px;
+        margin-top: -5px;
     }
     #Intro {
         text-align: center;
