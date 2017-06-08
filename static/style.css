@@ -230,7 +230,8 @@ footer .fa {
         font-size: 17px !important;
     }
     .white {
-        border-width: 0px;
+        /*border-width: 0px;*/
+        border: none;
         margin: 0px;
     }
 
