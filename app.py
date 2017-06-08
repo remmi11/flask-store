@@ -1,33 +1,37 @@
-# Main file for Shirts4Mike
-
 # Import statement
-from flask import (
-    Flask,
-    render_template,
-    Markup,
-    url_for,
-    flash,
-    redirect,
-    request
-)
-
-import sendgrid
+from flask import Flask, render_template, Markup, url_for, flash, redirect, request
 import os
 from datetime import date
+from flask_mail import Mail, Message
 
-# App setup
-app = Flask(__name__)
-app.config["SECRET_KEY"] = "some_really_long_random_string_here"
+app =Flask(__name__)
+mail=Mail(app)
 
-# Get details for sendgrid details
-sendgrid_file = "sendgrid.txt"
-sendgrid_details = []
+# set the secret key.  keep this really secret:
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
-with open(sendgrid_file) as f:
-    sendgrid_details = f.readlines()
-    sendgrid_details = [x.strip("\n") for x in sendgrid_details]
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'wtgeographer@gmail.com'
+app.config['MAIL_PASSWORD'] = 'Carroll@17'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
 
-# Global Variables
+# Route to send email
+@app.route("/send", methods=['GET','POST'])
+def send():
+    """Function to send email using flask_mail"""
+
+    sender = str(request.form['email'])
+    subject = str(request.form['name'])
+    content = str(request.form['comments'])
+
+    msg = Message(subject, sender = sender, recipients = ['sales@sophisticatedcollector.com'])
+    msg.body = content
+    mail.send(msg)
+    return redirect(url_for("contact"))
+
 products_info = [
     {
         "id": "101",
@@ -149,26 +153,7 @@ def contact():
     return render_template("contact.html", **context)
 
 
-# Route to send email
-@app.route("/send", methods=['POST'])
-def send():
-    """Function to send email using sendgrid API"""
-    sendgrid_object = sendgrid.SendGridClient(
-        sendgrid_details[0], sendgrid_details[1])
-    message = sendgrid.Mail()
-    sender = request.form["email"]
-    subject = request.form["name"]
-    body = request.form["message"]
-    message.add_to("sales@sophisticatedcollector.com")
-    message.set_from(sender)
-    message.set_subject(subject)
-    message.set_html(body)
-    sendgrid_object.send(message)
-    flash("Email sent.")
-    return redirect(url_for("contact"))
-
 @app.context_processor
-
 def override_url_for():
     return dict(url_for=dated_url_for)
 
