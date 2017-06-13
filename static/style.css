@@ -77,6 +77,16 @@ footer .fa {
 .thumbnail .caption {
     color:#777;
 }
+.price {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.product-name {
+    margin-top: 20px;
+    font-size: 55px;
+}
+
 /*.item-container .col-md-6 .container-price {
     margin: 15px;
     width: 47%;
@@ -158,10 +168,9 @@ footer .fa {
     color:#fff;
     background-color: #333745;
 }
-/*.col-md-6 img {
-    margin-top: 30px;
-    width: 100%;
-}*/
+.col-md-6 img {
+    margin-top: 10px;
+}
 .modal-header, h4, .close {
     background-color: #333;
     color: #fff !important;
@@ -174,9 +183,19 @@ footer .fa {
 .jumbotron p {
     font-size: 18px;
 }
+.breadcrumb a {
+    color: #777;
+}
+.pull-left {
+    color: #777;
+}
 
-
-
+.glyphicon {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   z-index: 1000;
+}
 /*############################*/
 
 
@@ -218,9 +237,13 @@ footer .fa {
     .navbar-header {
         min-height: 100px;
     }
-    .navbar-default .navbar-brand {
+    /*.navbar-default .navbar-brand {
         line-height: 80px;
+    }*/
+    .navbar-default .navbar-nav>li>a {
+        line-height: 50px;
     }
+
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form {
         margin-top: 20px;
@@ -242,6 +265,10 @@ footer .fa {
         /*border-width: 0px;*/
         border: none;
         margin: 0px;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+        line-height: 51px;
     }
 
 }
