@@ -9,14 +9,7 @@
 
         <div class="row">
             <div class="col-md-6">
-
-                <!--<span><img src="{{ url_for("static", filename=product["img"]) }}" class="img-rounded" alt="{{ product["name"] }} ?>"></span>-->
-
-                <span id="pop">
-                    <img id="imageresource" src="{{ url_for("static", filename=product["img"]) }}" class="img-rounded" style="width: 100%; height: auto;" alt="{{ product["name"] }} ?>"
-                    Click to Enlarge
-                </span>
-
+                <span><img src="{{ url_for("static", filename=product["img"]) }}" class="img-rounded" alt="{{ product["name"] }} ?>"></span>
             </div>
 
             <div class="col-md-6">
@@ -36,29 +29,6 @@
                 <p><i class="fa fa-send"></i>&nbsp;&nbsp;Ships in 7 to 10 business days.</p>
                 <p><i class="fa fa-credit-card-alt"></i>&nbsp;&nbsp;Payments are backed by PayPal's Purchase Protection program.</p>
 
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Creates the bootstrap modal where the image will appear -->
-<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Image preview</h4>-->
-
-                <div class="pull-left">{{ product["name"] }}</div>
-                <button type="button" class="close" data-dismiss="modal" title="Close"> <span class="glyphicon glyphicon-remove"></span></button>
-
-            </div>
-
-            <div class="modal-body">
-                <img src="" id="imagepreview" style="width: 100%; height: auto;">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

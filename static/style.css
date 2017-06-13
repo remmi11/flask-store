@@ -158,9 +158,18 @@ footer .fa {
     color:#fff;
     background-color: #333745;
 }
-.col-md-6 img {
+/*.col-md-6 img {
     margin-top: 30px;
     width: 100%;
+}*/
+.modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+#imagemodal {
+    margin-top: 60px;
 }
 .jumbotron p {
     font-size: 18px;
