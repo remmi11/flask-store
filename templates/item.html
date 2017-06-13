@@ -24,14 +24,14 @@
 
                 <p>{{ product["description"] }}</p>
                 <p> <span class='price'> {{ "${:.2f}".format(product["price"]) }}</span></p>
-
+                <br>
                 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="{{ product["item"] }}">
                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
-
+                <br>
                 <p><i class="fa fa-paypal" aria-hidden="true"></i>&nbsp;&nbsp;Payments processed by PayPal.</p>
                 <p><i class="fa fa-send"></i>&nbsp;&nbsp;Ships in 7 to 10 business days.</p>
                 <p><i class="fa fa-credit-card-alt"></i>&nbsp;&nbsp;Payments are backed by PayPal's Purchase Protection program.</p>
